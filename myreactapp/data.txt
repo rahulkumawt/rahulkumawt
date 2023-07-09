@@ -1,0 +1,22 @@
+  useEffect(()=>{
+    setTimeout(()=>{
+    if(localStorage.getItem('token')!=undefined && localStorage.getItem('role')=='admin')
+    {
+        setNavContent(<>
+            
+        </>);    
+    }
+    else if(localStorage.getItem('token')!=undefined && localStorage.getItem('role')=='user')
+    {
+        setNavContent(<>
+            
+            </>);    
+    }
+    else
+    {
+        setNavContent(<>
+            
+            </>);
+    }
+    },10);
+  },[]);
